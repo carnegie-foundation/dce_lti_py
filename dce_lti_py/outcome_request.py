@@ -163,6 +163,8 @@ class OutcomeRequest():
                 sourcedGUID.sourcedId
             self.score = str(result.resultRecord.result.
                              resultScore.textString)
+            result_data = result.resultRecord.result.resultData
+            self.result_data = str(result_data.getchildren()[0])
         except:
             pass
 
