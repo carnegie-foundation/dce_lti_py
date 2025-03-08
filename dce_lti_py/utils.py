@@ -1,5 +1,5 @@
 from uuid import uuid1
-import urlparse
+from urllib.parse import urlparse
 
 def parse_qs(qs):
     return dict( (k, v if len(v)>1 else v[0] )
