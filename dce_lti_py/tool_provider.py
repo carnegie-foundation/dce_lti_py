@@ -45,7 +45,7 @@ class ToolProvider(ToolBase):
             self.launch_url,
             'POST',
             self.to_params(),
-            self.launch_headers
+            dict(self.launch_headers) if isinstance(self.launch_headers, dict) else {}
         )
 
     def is_outcome_service(self):
